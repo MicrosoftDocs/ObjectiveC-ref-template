@@ -1,0 +1,9 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDRemoteSystemStatusType
+name: MCDRemoteSystemStatusType
+type: enum
+summary: 'The status type of a Remote System. '
+enumValue:
+- name: MCDRemoteSystemStatusTypeAvailable
+  value: "0"
+- name: MCDRemoteSystemStatusTypeAny

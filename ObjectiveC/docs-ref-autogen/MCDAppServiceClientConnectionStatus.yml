@@ -1,0 +1,21 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDAppServiceClientConnectionStatus
+name: MCDAppServiceClientConnectionStatus
+type: enum
+enumValue:
+- name: MCDAppServiceClientConnectionStatusSuccess
+  value: "0"
+- name: MCDAppServiceClientConnectionStatusAppNotInstalled
+  value: "1"
+- name: MCDAppServiceClientConnectionStatusAppUnavailable
+  value: "2"
+- name: MCDAppServiceClientConnectionStatusAppServiceUnavailable
+  value: "3"
+- name: MCDAppServiceClientConnectionStatusUnknown
+  value: "4"
+- name: MCDAppServiceClientConnectionStatusRemoteSystemUnavailable
+  value: "5"
+- name: MCDAppServiceClientConnectionStatusRemoteSystemNotSupportedByApp
+  value: "6"
+- name: MCDAppServiceClientConnectionStatusNotAuthorized
+  value: "7"

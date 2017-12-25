@@ -1,0 +1,17 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemFilte
+name: MCDRemoteSystemFilte
+type: protocol
+syntax: '@protocol MCDRemoteSystemFilte'
+methods:
+- name: 'matchesRemoteSystem:'
+  syntax: -(BOOL) matchesRemoteSystem:(nonnull MCDRemoteSystem *)remoteSystem;
+  summary: 'Checks whether a Remote System is matched by the current filter. '
+  parameters:
+  - name: remoteSystem
+    summary: 'The Remote System. '
+    type: MCDRemoteSystem
+    isPointer: true
+  returns:
+    summary: 'Whether the filter matches the specified Remote System. '
+    type: BOOL

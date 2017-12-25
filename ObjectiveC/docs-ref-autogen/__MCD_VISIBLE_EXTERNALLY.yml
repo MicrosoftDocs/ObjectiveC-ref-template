@@ -1,0 +1,5 @@
+### YamlMime:ObjectiveCSimpleType
+uid: __MCD_VISIBLE_EXTERNALLY
+name: __MCD_VISIBLE_EXTERNALLY
+type: macro
+syntax: '#define __MCD_VISIBLE_EXTERNALLY __attribute__((visibility("default")))'

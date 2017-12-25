@@ -1,0 +1,30 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemDiscoveryTypeFilter
+name: MCDRemoteSystemDiscoveryTypeFilter
+type: class
+summary: 'A class used to filter discovery based upon discovery type. '
+syntax: '@interface MCDRemoteSystemDiscoveryTypeFilter : NSObject <MCDRemoteSystemFilter>'
+inherits:
+- NSObject
+implements:
+- MCDRemoteSystemFilter
+properties:
+- name: type
+  summary: 'The type. '
+  syntax: '@property(readonly, assign) MCDRemoteSystemDiscoveryType type;'
+  type: MCDRemoteSystemDiscoveryType
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. Please use initWithKind.") __attribute__;
+  returns:
+    type: (unavailable("init not available. Please use initWithKind."
+- name: 'initWithType:'
+  syntax: -(nullable instancetype) initWithType:(MCDRemoteSystemDiscoveryType)initType;
+  summary: 'Initializes the filter with a discovery type. '
+  parameters:
+  - name: initType
+    summary: 'The discovery type. '
+    type: MCDRemoteSystemDiscoveryType
+  returns:
+    summary: 'The initialized filter, otherwise nil. '
+    type: instancetype

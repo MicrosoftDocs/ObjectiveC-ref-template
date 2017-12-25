@@ -1,0 +1,77 @@
+name: jinhwatest
+uid: toc.yml
+items:
+- name: Classes
+  items:
+  - name: MCDAppServiceClientConnectionManager
+    uid: MCDAppServiceClientConnectionManager
+  - name: MCDAppServiceClientResponse
+    uid: MCDAppServiceClientResponse
+  - name: MCDLocalSystem
+    uid: MCDLocalSystem
+  - name: MCDPlatform
+    uid: MCDPlatform
+  - name: MCDRemoteLauncher
+    uid: MCDRemoteLauncher
+  - name: MCDRemoteLauncherOptions
+    uid: MCDRemoteLauncherOptions
+  - name: MCDRemoteSystem
+    uid: MCDRemoteSystem
+  - name: MCDRemoteSystemConnectionRequest
+    uid: MCDRemoteSystemConnectionRequest
+  - name: MCDRemoteSystemDiscoveryManager
+    uid: MCDRemoteSystemDiscoveryManager
+  - name: MCDRemoteSystemDiscoveryTypeFilter
+    uid: MCDRemoteSystemDiscoveryTypeFilter
+  - name: MCDRemoteSystemKindFilter
+    uid: MCDRemoteSystemKindFilter
+  - name: MCDRemoteSystemStatusTypeFilter
+    uid: MCDRemoteSystemStatusTypeFilter
+  - name: MCDResource
+    uid: MCDResource
+- name: Defines
+  items:
+  - name: __MCD_VISIBLE_EXTERNALLY
+    uid: __MCD_VISIBLE_EXTERNALLY
+- name: Enumerations
+  items:
+  - name: MCDAppServiceClientClosedStatus
+    uid: MCDAppServiceClientClosedStatus
+  - name: MCDAppServiceClientConnectionStatus
+    uid: MCDAppServiceClientConnectionStatus
+  - name: MCDAppServiceResponseStatus
+    uid: MCDAppServiceResponseStatus
+  - name: MCDRemoteLauncherUriStatus
+    uid: MCDRemoteLauncherUriStatus
+  - name: MCDRemoteSystemDiscoveryType
+    uid: MCDRemoteSystemDiscoveryType
+  - name: MCDRemoteSystemKind
+    uid: MCDRemoteSystemKind
+  - name: MCDRemoteSystemStatus
+    uid: MCDRemoteSystemStatus
+  - name: MCDRemoteSystemStatusType
+    uid: MCDRemoteSystemStatusType
+- name: Functions
+  items:
+  - name: MCDRemoteSystemFriendlyNameForKind
+    uid: MCDRemoteSystemFriendlyNameForKind
+- name: Protocols
+  items:
+  - name: MCDAppServiceClientConnectionManagerDelegate
+    uid: MCDAppServiceClientConnectionManagerDelegate
+  - name: MCDClientIdentityProviderDelegat
+    uid: MCDClientIdentityProviderDelegat
+  - name: MCDOAuthCodeProviderDelegate
+    uid: MCDOAuthCodeProviderDelegate
+  - name: MCDRefreshTokenProviderDelegate
+    uid: MCDRefreshTokenProviderDelegate
+  - name: MCDRemoteSystemDiscoveryManagerDelegate
+    uid: MCDRemoteSystemDiscoveryManagerDelegate
+  - name: MCDRemoteSystemFilte
+    uid: MCDRemoteSystemFilte
+- name: Type Definitions
+  items:
+  - name: MCDAuthCodeCallback
+    uid: MCDAuthCodeCallback
+  - name: MCDRefreshTokenCallback
+    uid: MCDRefreshTokenCallback

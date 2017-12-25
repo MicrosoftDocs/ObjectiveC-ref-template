@@ -1,0 +1,66 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemDiscoveryManager
+name: MCDRemoteSystemDiscoveryManager
+type: class
+summary: 'A class used to find Remote Systems. '
+syntax: '@interface MCDRemoteSystemDiscoveryManager : NSObject'
+inherits:
+- NSObject
+properties:
+- name: delegate
+  summary: 'The delegate which will receive discovery events from this manager. '
+  syntax: '@property(readonly, weak) id<MCDRemoteSystemDiscoveryManagerDelegate> delegate;'
+  type: id
+  typeparameters:
+  - type: MCDRemoteSystemDiscoveryManagerDelegate
+- name: discoverAll
+  syntax: '@property(readwrite, assign) BOOL MCDRemoteSystemDiscoveryManager()::discoverAll;'
+  type: 'BOOL MCDRemoteSystemDiscoveryManager()::'
+methods:
+- name: 'initWithDelegate:'
+  syntax: -(nullable instancetype) initWithDelegate:(nonnull id<MCDRemoteSystemDiscoveryManagerDelegate>)delegate;
+  summary: 'Initializes the instance with the callback delegate. '
+  parameters:
+  - name: delegate
+    summary: 'The delegate. '
+    type: id
+    typeparameters:
+    - type: MCDRemoteSystemDiscoveryManagerDelegate
+  returns:
+    summary: 'This instance. Nil on failure. '
+    type: instancetype
+- name: 'initWithDelegate:withFilters:'
+  syntax: -(nullable instancetype) initWithDelegate:(nonnull id<MCDRemoteSystemDiscoveryManagerDelegate>)delegate withFilters:(nonnull NSSet *)filters;
+  summary: 'Initializes the instance with the callback delegate and a set of Remote System Discovery Filters. '
+  parameters:
+  - name: delegate
+    summary: 'The delegate. '
+    type: id
+    typeparameters:
+    - type: MCDRemoteSystemDiscoveryManagerDelegate
+  - name: filters
+    summary: 'The set of filters. '
+    type: NSSet
+    isPointer: true
+  returns:
+    summary: 'This instance. Nil on failure. '
+    type: instancetype
+- name: startDiscovery
+  syntax: -(void) startDiscovery;
+  summary: 'Starts the discovery of Remote Systems. Will restart any existing discovery. '
+  returns:
+    type: void
+- name: 'startDiscoveryWithHostName:'
+  syntax: -(void) startDiscoveryWithHostName:(nonnull NSString *)hostname;
+  summary: 'Starts the discovery of a Remote System which matches the supplied host name. '
+  parameters:
+  - name: hostname
+    type: NSString
+    isPointer: true
+  returns:
+    type: void
+- name: stopDiscovery
+  syntax: -(void) stopDiscovery;
+  summary: 'Stops the discovery. No-op if already dropped. '
+  returns:
+    type: void

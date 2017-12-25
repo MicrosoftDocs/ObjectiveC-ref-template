@@ -6,15 +6,25 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "docs-ref-autogen",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
         ]
       }
     ],
@@ -26,20 +36,17 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**"
+          "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/ObjectiveCTemplateTest/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "breadcrumb_path": "~/breadcrumb/toc.yml"
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "ObjectiveC"
+    "dest": "_site"
   }
 }

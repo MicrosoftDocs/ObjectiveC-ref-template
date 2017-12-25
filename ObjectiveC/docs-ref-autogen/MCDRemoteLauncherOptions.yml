@@ -1,0 +1,21 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteLauncherOptions
+name: MCDRemoteLauncherOptions
+type: class
+summary: 'A class to represent options passed when launching a URI against a Remote System. '
+syntax: '@interface MCDRemoteLauncherOptions : NSObject <NSCopying>'
+inherits:
+- NSObject
+implements:
+- NSCopying
+properties:
+- name: fallbackUri
+  summary: 'The fallback uri. '
+  syntax: '@property(readwrite, copy) NSString* fallbackUri;'
+  type: NSString
+  isPointer: true
+- name: preferredAppIds
+  summary: 'The app ids. '
+  syntax: '@property(readwrite, copy) NSArray* preferredAppIds;'
+  type: NSArray
+  isPointer: true

@@ -1,0 +1,42 @@
+### YamlMime:ObjectiveCType
+uid: MCDLocalSystem
+name: MCDLocalSystem
+type: class
+summary: 'A class to represent the local system. '
+syntax: '@interface MCDLocalSystem : NSObject'
+inherits:
+- NSObject
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. A MCDLocalSystem can only be created by the framework internally.") __attribute__;
+  returns:
+    type: (unavailable("init not available. A MCDLocalSystem can only be created by the framework internally."
+- name: 'registerCapability:completion:'
+  syntax: +(void) registerCapability:(nonnull NSString *)capability completion:(void(^)(NSError *_Nullable))DEPRECATED_ATTRIBUTE;
+  isStatic: true
+  parameters:
+  - name: capability
+    type: NSString
+    isPointer: true
+  - name: DEPRECATED_ATTRIBUTE
+    type: void
+    isBlock: true
+    parameters:
+    - type: NSError
+      isPointer: true
+  returns:
+    type: void
+- name: deviceThumbprint
+  syntax: +(nonnull NSString *) deviceThumbprint;
+  isStatic: true
+  summary: 'The device thumbprint provided by this system. '
+  returns:
+    type: NSString
+    isPointer: true
+- name: DEPRECATED_ATTRIBUTE
+  syntax: +(nonnull NSString *) DEPRECATED_ATTRIBUTE;
+  isStatic: true
+  summary: 'The deduplication hint provided by this system. Not guaranteed to be unique. '
+  returns:
+    type: NSString
+    isPointer: true

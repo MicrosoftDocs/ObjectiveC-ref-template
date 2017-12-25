@@ -1,0 +1,29 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemConnectionRequest
+name: MCDRemoteSystemConnectionRequest
+type: class
+summary: 'A class used to express a connection request intent against a Remote System. '
+syntax: '@interface MCDRemoteSystemConnectionRequest : NSObject'
+inherits:
+- NSObject
+properties:
+- name: remoteSystem
+  summary: 'The Remote System the class was initialized with. '
+  syntax: '@property(readonly, strong) MCDRemoteSystem* remoteSystem;'
+  type: MCDRemoteSystem
+  isPointer: true
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. Use initWithRemoteSystem.") __attribute__;
+  returns:
+    type: (unavailable("init not available. Use initWithRemoteSystem."
+- name: 'initWithRemoteSystem:'
+  syntax: -(nullable instancetype) initWithRemoteSystem:(nonnull MCDRemoteSystem *)remoteSystem;
+  summary: 'Initializes the Connection Request with a Remote System. '
+  parameters:
+  - name: remoteSystem
+    summary: 'The Remote System. '
+    type: MCDRemoteSystem
+    isPointer: true
+  returns:
+    type: instancetype

@@ -1,0 +1,12 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDRemoteSystemDiscoveryType
+name: MCDRemoteSystemDiscoveryType
+type: enum
+enumValue:
+- name: MCDRemoteSystemDiscoveryTypeCloud
+  value: "1"
+- name: MCDRemoteSystemDiscoveryTypeProximal
+  value: 1<<1
+- name: MCDRemoteSystemDiscoveryTypeAny
+  value: 0xFFFF
+- name: ''

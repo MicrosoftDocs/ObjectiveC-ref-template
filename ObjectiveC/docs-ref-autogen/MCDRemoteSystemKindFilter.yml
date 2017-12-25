@@ -1,0 +1,22 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemKindFilter
+name: MCDRemoteSystemKindFilter
+type: class
+summary: 'A class used to filter discovery based upon Remote System kinds. '
+syntax: '@interface MCDRemoteSystemKindFilter : NSObject <MCDRemoteSystemFilter>'
+inherits:
+- NSObject
+implements:
+- MCDRemoteSystemFilter
+methods:
+- name: 'initWithKindsArray:'
+  syntax: -(nullable instancetype) initWithKindsArray:(nonnull NSArray *)kinds;
+  summary: 'Initializes the filter with an array of kinds to match for. '
+  parameters:
+  - name: kinds
+    summary: 'The array of kinds. '
+    type: NSArray
+    isPointer: true
+  returns:
+    summary: 'The initialized filter, otherwise nil. '
+    type: instancetype

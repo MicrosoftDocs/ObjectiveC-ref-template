@@ -1,0 +1,20 @@
+### YamlMime:ObjectiveCType
+uid: MCDRefreshTokenProviderDelegate
+name: MCDRefreshTokenProviderDelegate
+type: protocol
+summary: 'A protocol for returning OAuth Refresh Tokens. '
+syntax: '@protocol MCDRefreshTokenProviderDelegate <MCDClientIdentityProviderDelegate>'
+implements:
+- MCDClientIdentityProviderDelegate
+methods:
+- name: 'getRefreshToken:'
+  syntax: -(nullable NSError *) getRefreshToken:(nullable MCDRefreshTokenCallback)completion;
+  summary: 'Asynchronously obtains a new Refresh Token. '
+  parameters:
+  - name: completion
+    summary: 'Callback which should be invoked when the OAuth refresh token is obtained or an error occurs. Should be saved and called whenever a new refresh token is available to provide platform with updated token. '
+    type: MCDRefreshTokenCallback
+  returns:
+    summary: 'An error if there was a failure preparing the async request. '
+    type: NSError
+    isPointer: true

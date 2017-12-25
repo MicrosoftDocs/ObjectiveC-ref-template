@@ -1,0 +1,14 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDRemoteLauncherUriStatus
+name: MCDRemoteLauncherUriStatus
+type: enum
+enumValue:
+- name: MCDRemoteLauncherUriStatusUnknown
+  value: "0"
+- name: MCDRemoteLauncherUriStatusSuccess
+- name: MCDRemoteLauncherUriStatusAppUnavailable
+- name: MCDRemoteLauncherUriStatusProtocolUnavailable
+- name: MCDRemoteLauncherUriStatusRemoteSystemUnavailable
+- name: MCDRemoteLauncherUriStatusBundleTooLarge
+- name: MCDRemoteLauncherUriStatusDeniedByLocalSystem
+- name: MCDRemoteLauncherUriStatusDeniedByRemoteSystem

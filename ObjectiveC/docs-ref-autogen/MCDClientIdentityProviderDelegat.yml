@@ -1,0 +1,11 @@
+### YamlMime:ObjectiveCType
+uid: MCDClientIdentityProviderDelegat
+name: MCDClientIdentityProviderDelegat
+type: protocol
+summary: 'A protocol for returning OAuth Client ID. '
+syntax: '@protocol MCDClientIdentityProviderDelegat'
+properties:
+- name: clientId
+  summary: 'Client ID that represents the current application. '
+  syntax: '@property(readonly, copy) NSString* MCDClientIdentityProviderDelegate-p::clientId;'
+  type: 'NSString* MCDClientIdentityProviderDelegate-p::'

@@ -1,0 +1,63 @@
+### YamlMime:ObjectiveCType
+uid: MCDPlatform
+name: MCDPlatform
+type: class
+summary: 'A static class to perform global scale commands to the Rome Platform. '
+syntax: '@interface MCDPlatform : NSObject'
+inherits:
+- NSObject
+methods:
+- name: 'startWithOAuthCodeProviderDelegate:completion:'
+  syntax: +(void) startWithOAuthCodeProviderDelegate:(id<MCDOAuthCodeProviderDelegate>)delegate completion:(void(^)(NSError *error))completion;
+  isStatic: true
+  summary: 'Asynchronously initializes the Rome Platform. This must be called with a successful completion before other parts of the framework can be invoked. '
+  parameters:
+  - name: delegate
+    summary: 'The delegate which provides an OAuthCode. '
+    type: id
+    typeparameters:
+    - type: MCDOAuthCodeProviderDelegate
+  - name: completion
+    summary: 'Callback invoked when the platform has attempted initialization. Sucessful when error is nil. '
+    type: void
+    isBlock: true
+    parameters:
+    - type: NSError *error
+  returns:
+    type: void
+- name: 'startWithRefreshTokenProviderDelegate:completion:'
+  syntax: +(void) startWithRefreshTokenProviderDelegate:(id<MCDRefreshTokenProviderDelegate>)delegate completion:(void(^)(NSError *error))completion;
+  isStatic: true
+  summary: 'Asynchronously initializes the Rome Platform. This must be called with a successful completion before other parts of the framework can be invoked. '
+  parameters:
+  - name: delegate
+    summary: 'The delegate which provides a Refresh Token. '
+    type: id
+    typeparameters:
+    - type: MCDRefreshTokenProviderDelegate
+  - name: completion
+    summary: 'Callback invoked when the platform has attempted initialization. Sucessful when error is nil. '
+    type: void
+    isBlock: true
+    parameters:
+    - type: NSError *error
+  returns:
+    type: void
+- name: suspend
+  syntax: +(void) suspend;
+  isStatic: true
+  summary: 'Suspends the Rome Platform. This should be called when your app is sent to the background. '
+  returns:
+    type: void
+- name: resume
+  syntax: +(void) resume;
+  isStatic: true
+  summary: 'Resumes the Rome platform. This should be called when your app enters the foreground. '
+  returns:
+    type: void
+- name: shutdown
+  syntax: +(void) shutdown;
+  isStatic: true
+  summary: 'Shutdowns the Rome Platform. This should be called when your app is exiting or you want to forcefully stop the platform. '
+  returns:
+    type: void

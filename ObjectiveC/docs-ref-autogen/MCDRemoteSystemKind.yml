@@ -1,0 +1,12 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDRemoteSystemKind
+name: MCDRemoteSystemKind
+type: enum
+enumValue:
+- name: MCDRemoteSystemKindUnknown
+  value: "0"
+- name: MCDRemoteSystemKindDesktop
+- name: MCDRemoteSystemKindHolographic
+- name: MCDRemoteSystemKindPhone
+- name: MCDRemoteSystemKindXbox
+- name: MCDRemoteSystemKindHub

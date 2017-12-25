@@ -1,0 +1,18 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDAppServiceResponseStatus
+name: MCDAppServiceResponseStatus
+type: enum
+enumValue:
+- name: MCDAppServiceResponseStatusSuccess
+  value: "0"
+- name: MCDAppServiceResponseStatusFailure
+  value: "1"
+- name: MCDAppServiceResponseStatusResourceLimitsExceeded
+  value: "2"
+- name: MCDAppServiceResponseStatusUnknown
+  value: "3"
+- name: MCDAppServiceResponseStatusRemoteSystemUnavailable
+  value: "4"
+- name: MCDAppServiceResponseStatusMessageTooLarge
+  value: "5"
+- name: ''

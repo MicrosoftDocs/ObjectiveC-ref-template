@@ -1,0 +1,12 @@
+### YamlMime:ObjectiveCFunction
+uid: MCDRemoteSystemFriendlyNameForKind
+name: MCDRemoteSystemFriendlyNameForKind
+type: function
+summary: 'Returns string representation for a Remote System Kind. '
+syntax: __MCD_VISIBLE_EXTERNALLY NSString* MCDRemoteSystemFriendlyNameForKind(MCDRemoteSystemKind type);
+returns:
+  type: __MCD_VISIBLE_EXTERNALLY NSString
+  isPointer: true
+parameters:
+- name: type
+  type: MCDRemoteSystemKind

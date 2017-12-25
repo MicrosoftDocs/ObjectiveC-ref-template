@@ -1,0 +1,26 @@
+### YamlMime:ObjectiveCType
+uid: MCDAppServiceClientResponse
+name: MCDAppServiceClientResponse
+type: class
+syntax: '@interface MCDAppServiceClientResponse : NSObject'
+inherits:
+- NSObject
+properties:
+- name: message
+  syntax: '@property(readonly, copy) NSDictionary* message;'
+  type: NSDictionary
+  isPointer: true
+- name: status
+  syntax: '@property(readonly, assign) MCDAppServiceResponseStatus status;'
+  type: MCDAppServiceResponseStatus
+methods:
+- name: 'initWithDictionary:status:'
+  syntax: -(nullable instancetype) initWithDictionary:(nonnull NSDictionary *)dictionary status:(MCDAppServiceResponseStatus)status;
+  parameters:
+  - name: dictionary
+    type: NSDictionary
+    isPointer: true
+  - name: status
+    type: MCDAppServiceResponseStatus
+  returns:
+    type: instancetype

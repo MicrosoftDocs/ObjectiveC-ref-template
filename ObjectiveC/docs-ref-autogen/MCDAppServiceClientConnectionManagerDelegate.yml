@@ -1,0 +1,58 @@
+### YamlMime:ObjectiveCType
+uid: MCDAppServiceClientConnectionManagerDelegate
+name: MCDAppServiceClientConnectionManagerDelegate
+type: protocol
+syntax: '@protocol MCDAppServiceClientConnectionManagerDelegate <NSObject>'
+implements:
+- NSObject
+methods:
+- name: 'appServiceClientConnectionManagerDidOpen:'
+  syntax: -(void) appServiceClientConnectionManagerDidOpen:(nonnull MCDAppServiceClientConnectionManager *)manager;
+  summary: 'Called when a connection has been established. '
+  parameters:
+  - name: manager
+    summary: 'The delegating MCDAppServiceClientConnectionManager. '
+    type: MCDAppServiceClientConnectionManager
+    isPointer: true
+  returns:
+    type: void
+- name: 'appServiceClientConnectionManager:didFail:'
+  syntax: -(void) appServiceClientConnectionManager:(nonnull MCDAppServiceClientConnectionManager *)manager didFail:(MCDAppServiceClientConnectionStatus)status;
+  summary: 'Called when there was a failure communicating with the Remote System. '
+  parameters:
+  - name: manager
+    summary: 'The delegating MCDAppServiceClientConnectionManager. '
+    type: MCDAppServiceClientConnectionManager
+    isPointer: true
+  - name: status
+    summary: 'The new status. '
+    type: MCDAppServiceClientConnectionStatus
+  returns:
+    type: void
+- name: 'appServiceClientConnectionManager:didClose:'
+  syntax: -(void) appServiceClientConnectionManager:(nonnull MCDAppServiceClientConnectionManager *)manager didClose:(MCDAppServiceClientClosedStatus)status;
+  summary: 'Called when a connection to a Remote System has closed. '
+  parameters:
+  - name: manager
+    summary: 'The delegating MCDAppServiceClientConnectionManager. '
+    type: MCDAppServiceClientConnectionManager
+    isPointer: true
+  - name: status
+    summary: 'The status. '
+    type: MCDAppServiceClientClosedStatus
+  returns:
+    type: void
+- name: 'appServiceClientConnectionManager:didReceiveResponse:'
+  syntax: -(void) appServiceClientConnectionManager:(nonnull MCDAppServiceClientConnectionManager *)manager didReceiveResponse:(nonnull MCDAppServiceClientResponse *)response;
+  summary: 'Called when the client has received an App Service message from the Remote System. '
+  parameters:
+  - name: manager
+    summary: 'The delegating MCDAppServiceClientConnectionManager. '
+    type: MCDAppServiceClientConnectionManager
+    isPointer: true
+  - name: response
+    summary: 'The incoming message. '
+    type: MCDAppServiceClientResponse
+    isPointer: true
+  returns:
+    type: void
