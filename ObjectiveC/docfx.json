@@ -36,7 +36,8 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/ObjectiveCTemplateTest/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "extendBreadcrumb": true,
+      "feedback_system": "Standard"
     },
     "fileMetadata": {},
     "template": [],
