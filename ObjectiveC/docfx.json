@@ -10,6 +10,8 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
@@ -36,17 +38,20 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**"
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/toc.yml"
+      "breadcrumb_path": "/ObjectiveCTemplateTest/breadcrumb/toc.json",
+      "extendBreadcrumb": true
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "_site"
+    "dest": "ObjectiveC"
   }
 }
