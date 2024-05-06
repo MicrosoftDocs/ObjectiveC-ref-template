@@ -1,0 +1,11 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDRemoteSystemStatus
+name: MCDRemoteSystemStatus
+type: enum
+summary: 'The status of a Remote System. '
+enumValue:
+- name: MCDRemoteSystemStatusUnknown
+  value: "0"
+- name: MCDRemoteSystemStatusDiscoveringAvailability
+- name: MCDRemoteSystemStatusAvailable
+- name: MCDRemoteSystemStatusUnavailable

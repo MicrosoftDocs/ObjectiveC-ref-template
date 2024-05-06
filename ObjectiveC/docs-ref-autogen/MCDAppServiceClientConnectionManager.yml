@@ -1,0 +1,73 @@
+### YamlMime:ObjectiveCType
+uid: MCDAppServiceClientConnectionManager
+name: MCDAppServiceClientConnectionManager
+type: class
+summary: 'A class used to communicate with a Remote System using App Services.. '
+syntax: '@interface MCDAppServiceClientConnectionManager : NSObject'
+inherits:
+- NSObject
+properties:
+- name: delegate
+  syntax: '@property(readonly, weak) id<MCDAppServiceClientConnectionManagerDelegate> delegate;'
+  type: id
+  typeparameters:
+  - type: MCDAppServiceClientConnectionManagerDelegate
+- name: connectionRequest
+  summary: 'The MCDRemoteSystemConnectionRequest. '
+  syntax: '@property(readonly, strong) MCDRemoteSystemConnectionRequest* connectionRequest;'
+  type: MCDRemoteSystemConnectionRequest
+  isPointer: true
+- name: appServiceName
+  summary: 'The App Service name. '
+  syntax: '@property(readonly, copy) NSString* appServiceName;'
+  type: NSString
+  isPointer: true
+- name: appIdentifier
+  summary: 'The App Service Identifier name. '
+  syntax: '@property(readonly, copy) NSString* appIdentifier;'
+  type: NSString
+  isPointer: true
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. Please use initWithConnectionRequest.") __attribute__;
+  returns:
+    type: (unavailable("init not available. Please use initWithConnectionRequest."
+- name: 'initWithConnectionRequest:appServiceName:appIdentifier:delegate:'
+  syntax: -(nullable instancetype) initWithConnectionRequest:(nonnull MCDRemoteSystemConnectionRequest *)request appServiceName:(nonnull NSString *)appServiceName appIdentifier:(nonnull NSString *)appIdentifier delegate:(nonnull id<MCDAppServiceClientConnectionManagerDelegate>)delegate;
+  summary: 'Create an instance. '
+  parameters:
+  - name: request
+    type: MCDRemoteSystemConnectionRequest
+    isPointer: true
+  - name: appServiceName
+    type: NSString
+    isPointer: true
+  - name: appIdentifier
+    type: NSString
+    isPointer: true
+  - name: delegate
+    type: id
+    typeparameters:
+    - type: MCDAppServiceClientConnectionManagerDelegate
+  returns:
+    type: instancetype
+- name: close
+  syntax: -(nullable NSError *) close;
+  summary: 'Closes an open connection if applicable. No-op if already closed. '
+  returns:
+    type: NSError
+    isPointer: true
+- name: openRemote
+  syntax: -(void) openRemote;
+  summary: 'Openes the remote connection. '
+  returns:
+    type: void
+- name: 'sendMessage:'
+  syntax: -(void) sendMessage:(nonnull NSDictionary *)dictionary;
+  summary: 'Sends a message to the remote device. '
+  parameters:
+  - name: dictionary
+    type: NSDictionary
+    isPointer: true
+  returns:
+    type: void

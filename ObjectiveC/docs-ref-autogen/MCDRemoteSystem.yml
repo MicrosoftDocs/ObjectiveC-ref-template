@@ -1,0 +1,47 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystem
+name: MCDRemoteSystem
+type: class
+summary: 'A class to represent a Remote System. '
+syntax: '@interface MCDRemoteSystem : NSObject'
+inherits:
+- NSObject
+properties:
+- name: id
+  summary: 'The identifier for this Remote System. '
+  syntax: '@property(readonly, copy) NSString* id;'
+  type: NSString
+  isPointer: true
+- name: displayName
+  summary: 'The friendly display name of this Remote System. '
+  syntax: '@property(readonly, copy) NSString* displayName;'
+  type: NSString
+  isPointer: true
+- name: DEPRECATED_ATTRIBUTE
+  summary: 'The deduplication hint of this Remote System. Not guaranteed to be set or unique. '
+  syntax: '@property(readonly, copy) NSString* deduplicationHint DEPRECATED_ATTRIBUTE;'
+  type: NSString* deduplicationHint
+- name: DEPRECATED_ATTRIBUTE
+  summary: 'The resources associated with this remote system. '
+  syntax: '@property(readonly, copy) NSArray* resources DEPRECATED_ATTRIBUTE;'
+  type: NSArray* resources
+- name: kind
+  summary: 'The kind of this Remote System. '
+  syntax: '@property(readonly, assign) MCDRemoteSystemKind kind;'
+  type: MCDRemoteSystemKind
+- name: isAvailableByProximity
+  summary: 'Whether the RemoteSystem can be connected over proximally (UDP or Bluetooth) '
+  syntax: '@property(readonly, assign) BOOL isAvailableByProximity;'
+  type: BOOL
+- name: status
+  summary: 'The availablity of this Remote System. '
+  syntax: '@property(readonly, assign) MCDRemoteSystemStatus status;'
+  type: MCDRemoteSystemStatus
+- name: isConnected
+  syntax: '@property(readonly, assign) BOOL MCDRemoteSystem()::isConnected;'
+  type: 'BOOL MCDRemoteSystem()::'
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. A MCDRemoteSystem can only be created by the framework internally.") __attribute__;
+  returns:
+    type: (unavailable("init not available. A MCDRemoteSystem can only be created by the framework internally."

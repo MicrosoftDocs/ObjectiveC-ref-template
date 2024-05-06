@@ -1,0 +1,5 @@
+### YamlMime:ObjectiveCSimpleType
+uid: MCDRefreshTokenCallback
+name: MCDRefreshTokenCallback
+type: typedef
+syntax: typedef void(^ MCDRefreshTokenCallback) (NSError *_Nullable error, NSString *_Nullable refreshToken)

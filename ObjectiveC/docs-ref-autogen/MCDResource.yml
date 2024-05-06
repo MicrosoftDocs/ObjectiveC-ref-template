@@ -1,0 +1,29 @@
+### YamlMime:ObjectiveCType
+uid: MCDResource
+name: MCDResource
+type: class
+summary: 'A class to represent an application resource. '
+syntax: '@interface MCDResource : NSObject'
+inherits:
+- NSObject
+properties:
+- name: id
+  summary: 'The identifier for this resource. '
+  syntax: '@property(readonly, copy) NSString* _Nullable id;'
+  type: NSString
+  isPointer: true
+- name: url
+  summary: 'The URL for this resource. '
+  syntax: '@property(readonly, copy) NSString* _Nullable url;'
+  type: NSString
+  isPointer: true
+- name: value
+  summary: 'The value of this resource. '
+  syntax: '@property(readonly, copy) NSString* _Nullable value;'
+  type: NSString
+  isPointer: true
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. A MCDResource can only be created by the framework internally.") __attribute__;
+  returns:
+    type: (unavailable("init not available. A MCDResource can only be created by the framework internally."

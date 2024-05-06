@@ -1,0 +1,65 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemDiscoveryManagerDelegate
+name: MCDRemoteSystemDiscoveryManagerDelegate
+type: protocol
+summary: 'Set of methods to be implemented to receive events from the Remote System Discovery Manager. '
+syntax: '@protocol MCDRemoteSystemDiscoveryManagerDelegate <NSObject>'
+implements:
+- NSObject
+methods:
+- name: 'remoteSystemDiscoveryManager:didFind:'
+  syntax: -(void) remoteSystemDiscoveryManager:(nonnull MCDRemoteSystemDiscoveryManager *)discoveryManager didFind:(nonnull MCDRemoteSystem *)remoteSystem;
+  summary: 'Called when a Remote System has been discovered. '
+  parameters:
+  - name: discoveryManager
+    summary: 'The delegating Remote System Discovery Manager. '
+    type: MCDRemoteSystemDiscoveryManager
+    isPointer: true
+  - name: remoteSystem
+    summary: 'The discovered Remote System. '
+    type: MCDRemoteSystem
+    isPointer: true
+  returns:
+    type: void
+- name: 'remoteSystemDiscoveryManager:didRemove:'
+  syntax: -(void) remoteSystemDiscoveryManager:(nonnull MCDRemoteSystemDiscoveryManager *)discoveryManager didRemove:(nonnull MCDRemoteSystem *)remoteSystem;
+  summary: 'Called when a previously discovered Remote System has been removed. '
+  parameters:
+  - name: discoveryManager
+    summary: 'The delegating Remote System Discovery Manager. '
+    type: MCDRemoteSystemDiscoveryManager
+    isPointer: true
+  - name: remoteSystem
+    summary: 'The Remote System which was undiscovered. '
+    type: MCDRemoteSystem
+    isPointer: true
+  returns:
+    type: void
+- name: 'remoteSystemDiscoveryManager:didUpdate:'
+  syntax: -(void) remoteSystemDiscoveryManager:(nonnull MCDRemoteSystemDiscoveryManager *)discoveryManager didUpdate:(nonnull MCDRemoteSystem *)remoteSystem;
+  summary: 'Called when a previously discovered Remote System has been updated with more information. For example, the device may be discovered first proximally and then over the cloud. '
+  parameters:
+  - name: discoveryManager
+    summary: 'The delegating Remote System Discovery Manager. '
+    type: MCDRemoteSystemDiscoveryManager
+    isPointer: true
+  - name: remoteSystem
+    summary: 'The discovered Remote System. The instance returned should be considered distinct than the instance previously returned through didFind. '
+    type: MCDRemoteSystem
+    isPointer: true
+  returns:
+    type: void
+- name: 'remoteSystemDiscoveryManagerDidComplete:withError:'
+  syntax: -(void) remoteSystemDiscoveryManagerDidComplete:(nonnull MCDRemoteSystemDiscoveryManager *)discoveryManager withError:(nullable NSError *)error;
+  summary: 'Called when the discovery operation has completed. '
+  parameters:
+  - name: discoveryManager
+    summary: 'The delegating Remote System Discovery Manager. '
+    type: MCDRemoteSystemDiscoveryManager
+    isPointer: true
+  - name: error
+    summary: 'Nil on success, otherwise an error indicating why discovery failed. '
+    type: NSError
+    isPointer: true
+  returns:
+    type: void

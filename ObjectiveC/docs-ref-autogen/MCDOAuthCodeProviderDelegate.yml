@@ -1,0 +1,24 @@
+### YamlMime:ObjectiveCType
+uid: MCDOAuthCodeProviderDelegate
+name: MCDOAuthCodeProviderDelegate
+type: protocol
+summary: 'A protocol for returning OAuth Access Code. '
+syntax: '@protocol MCDOAuthCodeProviderDelegate <MCDClientIdentityProviderDelegate>'
+implements:
+- MCDClientIdentityProviderDelegate
+methods:
+- name: 'getAccessCode:completion:'
+  syntax: -(nullable NSError *) getAccessCode:(nonnull NSString *)signInUri completion:(nullable MCDAuthCodeCallback)completion;
+  summary: 'Asynchronously obtains a new OAuth access code. '
+  parameters:
+  - name: signInUri
+    summary: 'The URI which should be shown in a WebView. '
+    type: NSString
+    isPointer: true
+  - name: completion
+    summary: 'Callback which should be invoked when the OAuth access code is obtained or an error occurs. '
+    type: MCDAuthCodeCallback
+  returns:
+    summary: 'An error if there was a failure preparing the async request. '
+    type: NSError
+    isPointer: true

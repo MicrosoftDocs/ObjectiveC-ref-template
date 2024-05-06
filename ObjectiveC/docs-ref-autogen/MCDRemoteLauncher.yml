@@ -1,0 +1,59 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteLauncher
+name: MCDRemoteLauncher
+type: class
+summary: 'A class used to launch URIs on Remote Systems. '
+syntax: '@interface MCDRemoteLauncher : NSObject'
+inherits:
+- NSObject
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available.") __attribute__;
+  returns:
+    type: (unavailable("init not available."
+- name: 'launchUri:withRequest:withCompletion:'
+  syntax: +(void) launchUri:(nonnull NSString *)uri withRequest:(nonnull MCDRemoteSystemConnectionRequest *)request withCompletion:(nullable void(^)(MCDRemoteLauncherUriStatus))completion;
+  isStatic: true
+  summary: 'Launches a URI against the Remote System specified in the Connection Request. '
+  parameters:
+  - name: uri
+    summary: 'The URI to launch. '
+    type: NSString
+    isPointer: true
+  - name: request
+    summary: 'The Connection Request. '
+    type: MCDRemoteSystemConnectionRequest
+    isPointer: true
+  - name: completion
+    summary: 'The callback invoked when the request suceeds or fails. '
+    type: void
+    isBlock: true
+    parameters:
+    - type: MCDRemoteLauncherUriStatus
+  returns:
+    type: void
+- name: 'launchUri:withRequest:withOptions:withCompletion:'
+  syntax: +(void) launchUri:(nonnull NSString *)uri withRequest:(nonnull MCDRemoteSystemConnectionRequest *)request withOptions:(nonnull MCDRemoteLauncherOptions *)options withCompletion:(nonnull void(^)(MCDRemoteLauncherUriStatus))completion;
+  isStatic: true
+  summary: 'Launches a URI with options against the Remote System specified in the Connection Request. '
+  parameters:
+  - name: uri
+    summary: 'The URI to launch. '
+    type: NSString
+    isPointer: true
+  - name: request
+    summary: 'The Connection Request. '
+    type: MCDRemoteSystemConnectionRequest
+    isPointer: true
+  - name: options
+    summary: 'The launcher options. '
+    type: MCDRemoteLauncherOptions
+    isPointer: true
+  - name: completion
+    summary: 'The block to invoke when the async request either succeeds or fails. '
+    type: void
+    isBlock: true
+    parameters:
+    - type: MCDRemoteLauncherUriStatus
+  returns:
+    type: void

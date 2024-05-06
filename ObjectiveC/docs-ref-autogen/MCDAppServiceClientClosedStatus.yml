@@ -1,0 +1,13 @@
+### YamlMime:ObjectiveCEnum
+uid: MCDAppServiceClientClosedStatus
+name: MCDAppServiceClientClosedStatus
+type: enum
+enumValue:
+- name: MCDAppServiceClientClosedStatusCompleted
+  value: "0"
+- name: MCDAppServiceClientClosedStatusCancelled
+  value: "1"
+- name: MCDAppServiceClientClosedStatusResourceLimitsExceeded
+  value: "2"
+- name: MCDAppServiceClientClosedStatusUnknown
+  value: "3"

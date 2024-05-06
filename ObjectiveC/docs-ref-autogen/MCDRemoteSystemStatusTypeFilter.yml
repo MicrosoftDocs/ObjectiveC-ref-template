@@ -1,0 +1,29 @@
+### YamlMime:ObjectiveCType
+uid: MCDRemoteSystemStatusTypeFilter
+name: MCDRemoteSystemStatusTypeFilter
+type: class
+summary: 'A class used which represents a filter based upon status type. '
+syntax: '@interface MCDRemoteSystemStatusTypeFilter : NSObject <MCDRemoteSystemFilter>'
+inherits:
+- NSObject
+implements:
+- MCDRemoteSystemFilter
+properties:
+- name: type
+  summary: 'The status type. '
+  syntax: '@property(readonly, assign) MCDRemoteSystemStatusType type;'
+  type: MCDRemoteSystemStatusType
+methods:
+- name: __attribute__
+  syntax: -((unavailable("init not available. Please use initWithStatusType.") __attribute__;
+  returns:
+    type: (unavailable("init not available. Please use initWithStatusType."
+- name: 'initWithStatusType:'
+  syntax: -(nullable instancetype) initWithStatusType:(MCDRemoteSystemStatusType)statusType;
+  summary: 'Initializes the filter with a status type.  statusType The desired status type. '
+  parameters:
+  - name: statusType
+    type: MCDRemoteSystemStatusType
+  returns:
+    summary: 'The initialized filter, otherwise nil. '
+    type: instancetype

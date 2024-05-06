@@ -6,6 +6,7 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "docs-ref-autogen",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -15,6 +16,17 @@
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "breadcrumb",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
         ]
       }
     ],

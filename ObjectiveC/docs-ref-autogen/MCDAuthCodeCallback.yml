@@ -1,0 +1,5 @@
+### YamlMime:ObjectiveCSimpleType
+uid: MCDAuthCodeCallback
+name: MCDAuthCodeCallback
+type: typedef
+syntax: typedef void(^ MCDAuthCodeCallback) (NSError *_Nullable error, NSString *_Nullable accessCode)
